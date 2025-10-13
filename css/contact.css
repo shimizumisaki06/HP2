@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+:root {
+  --base: #333333;
+  --main: #e6e5ef;
+  --primary: #ced7dc;
+  --accent: #2c6bcf;
+  --white-color: #fff;
+}
+
+.contents {
+  padding: 120px 0;
+}
+
+/*---------- kv ----------*/
+.kv {
+  position: relative;
+  height: 400px;
+  color: var(--white-color, #fff);
+  overflow: hidden;
+  isolation: isolate;
+  --kv-x: 22%;
+  --kv-y: 82%;
+  --kv-bleed-x: clamp(48px, 14vw, 160px);
+  --kv-bleed-y: clamp(64px, 20vw, 180px);
+}
+.kv::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--kv-bleed-y));
+  right: calc(-1 * var(--kv-bleed-x));
+  bottom: calc(-1 * var(--kv-bleed-y));
+  left: calc(-1 * var(--kv-bleed-x));
+  z-index: -1;
+  background: linear-gradient(rgba(62, 62, 62, 0.46), rgba(62, 62, 62, 0.46)),
+    url("../img/contact-img.jpg") var(--kv-x) var(--kv-y) / cover no-repeat;
+}
+
+.kv_box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 clamp(16px, 4vw, 24px);
+  margin-inline: auto;
+  max-width: 1000px;
+}
+
+.kv_title {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  font-size: clamp(20px, 5vw, 32px);
+}
+
+/* contact */
+.contact-container{
+  width: clamp(340px, 100%, 1000px);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 24px);
+  box-sizing: border-box;
+}
+
+.contact_lead{
+  margin: .6em auto 1.2em;
+  text-align: center;
+  max-width: 48em;
+  color: color-mix(in srgb, var(--base) 86%, #000 14%);
+  font-size: clamp(14px, 2.3vw, 16px);
+}
+
+.contact_form{
+  display: grid;
+  gap: clamp(14px, 3vw, 18px);
+}
+.form_row{ display: grid; gap: 12px; }
+.form_row--1{ grid-template-columns: 1fr; }
+.form_row--2{ grid-template-columns: 1fr 1fr; }
+@media (max-width: 640px){
+  .form_row--2{ grid-template-columns: 1fr; }
+}
+
+.form_field label,
+.form_checkgroup legend{
+  display: block;
+  font-weight: 700;
+  margin: 0 0 .35em;
+}
+
+.contact_form input[type="text"],
+.contact_form input[type="email"],
+.contact_form input[type="tel"],
+.contact_form textarea{
+  width: 100%;
+  height: 44px;
+  padding: 8px 10px;
+  border: 2px solid var(--accent);
+  background: var(--white-color);
+  border-radius: 4px;
+  font: inherit;
+  color: var(--base);
+  box-sizing: border-box;
+  outline: none;
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+.contact_form textarea{
+  height: auto;
+  min-block-size: 160px;
+  resize: vertical;
+}
+.contact_form input:focus-visible,
+.contact_form textarea:focus-visible{
+  border-color: color-mix(in srgb, var(--accent) 88%, #000 12%);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, #000 0%);
+}
+
+.form_checkgroup{
+  gap: 10px;
+}
+.form_checkgroup legend{ margin-bottom: .4em; }
+.form_checkgroup .check{
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  margin-right: clamp(10px, 2vw, 16px);
+  white-space: nowrap;
+}
+.form_checkgroup input[type="checkbox"]{
+  inline-size: 16px; block-size: 16px;
+  accent-color: var(--accent);
+}
+
+.form_actions{
+  display: grid; place-items: center;
+  margin-top: clamp(8px, 2.6vw, 12px);
+}
+.btn-submit{
+  display: inline-grid;
+  place-items: center;
+  min-width: clamp(220px, 40vw, 320px);
+  height: 48px;
+  padding-inline: 18px;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  background: var(--white-color);
+  color: var(--base);
+  font-weight: 800;
+  letter-spacing: .02em;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+.btn-submit .arrow{ font-size: 22px; line-height: 1; margin-left: .4em; }
+.btn-submit:hover,
+.btn-submit:focus-visible{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.18);
+}
+
+.u-visually-hidden{
+  position:absolute !important;
+  width:1px; height:1px;
+  padding:0; margin:-1px; overflow:hidden;
+  clip: rect(0 0 0 0); white-space:nowrap; border:0;
+}
+
+.contact_form label.u-visually-hidden{
+  position: static !important;
+  width: auto;
+  height: 1em;
+  margin: 0 0 .35em;
+  padding: 0;
+  clip: auto;
+  white-space: normal;
+  overflow: visible;
+  border: 0;
+  visibility: hidden;
+}
+
+.contact_form label.u-visually-hidden{
+  position: static !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 0 .35em !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  border: 0 !important;
+  visibility: hidden !important;
+}
+
+.contact_form .form_field label{
+  line-height: 1;
+  height: auto;
+  margin-bottom: .35em;
+}
+
+.form_checkgroup{
+  display: grid;
+  gap: 12px 16px;
+}
+.form_checkgroup .check{
+  display: flex;
+  align-items: center;
+  gap: .45em;
+  margin: 0;
+  white-space: normal;
+}
+
+.cta_btn-wrapper,
+.btn-arrow-right-con {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.con-btn {
+  margin: 0;
+}
+
+.con-btn a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(200px, 50vw, 280px);
+  padding: 15px 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn-arrow-right-con a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 27px;
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid var(--white-color);
+  border-right: 3px solid var(--white-color);
+  transform: rotate(45deg);
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) and (max-width: 1080px){
+  .form_checkgroup{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 16px;
+  }
+}
+
+@media (min-width: 1081px){
+  .form_checkgroup{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 16px;
+  }
+}
+
+.form_checkgroup{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 16px;
+}
+.form_checkgroup > *{ min-width: 0; }
+.form_checkgroup .check{
+  display: flex;
+  align-items: center;
+  gap: .45em;
+  margin: 0;
+  white-space: normal;
+}
+
+@media (min-width: 375px) and (max-width: 767px){
+  .form_checkgroup{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px){
+  .form_checkgroup{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

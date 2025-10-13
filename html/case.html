@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>M.Shimizu -HP②-</title>
+    <meta
+      name="description"
+      content="【WithCode(ウィズコード)】Web制作会社が開発した実践的なカリキュラム。卒業後からWeb制作会社の案件を担当しながら稼ぐ環境を提供する唯一のプログラミングスクールです。"
+    />
+    <meta name="keywords" content="IT,プログラミング,フリーランス,副業" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="https://withcode-plus.tech" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WithCode -HP②-" />
+    <meta
+      property="og:description"
+      content="【WithCode(ウィズコード)】Web制作会社が開発した実践的なカリキュラム。卒業後からWeb制作会社の案件を担当しながら稼ぐ環境を提供する唯一のプログラミングスクールです。"
+    />
+    <meta property="og:site_name" content="WithCode" />
+    <meta
+      property="og:image"
+      content="https://withcode-plus.tech/img/logo.png"
+    />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180×180" href="img/logo.png" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/case.css" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <p class="header-logo">
+        <a href="../index.html" class="header-logo_link">
+          <img
+            src="../img/logo.png"
+            alt="Shimizu Web Studio"
+            width="215"
+            height="50"
+          />
+        </a>
+      </p>
+
+      <input
+        type="checkbox"
+        id="nav-toggle"
+        class="hamburger-input"
+        aria-hidden="true"
+      />
+
+      <nav class="header-nav" id="global-nav" aria-label="グローバルナビ">
+        <ul class="header-nav_list">
+          <li class="header-nav_item">
+            <a href="about.html" class="header-nav_link" aria-current="page"
+              >About</a
+            >
+          </li>
+          <li class="header-nav_item">
+            <a href="service.html" class="header-nav_link">Service</a>
+          </li>
+          <li class="header-nav_item">
+            <a href="case.html" class="header-nav_link">Case</a>
+          </li>
+          <li class="header-nav_item">
+            <a href="contact.html" class="header-nav_link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ハンバーガー -->
+      <label
+        for="nav-toggle"
+        class="hamburger"
+        role="button"
+        aria-label="メニューを開閉"
+        aria-controls="global-nav"
+        aria-expanded="false"
+      >
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </label>
+      <label
+        for="nav-toggle"
+        class="hamburger-close"
+        aria-label="メニューを閉じる"
+      ></label>
+    </header>
+
+    <!-- kv -->
+    <div class="kv">
+      <div class="container-lg">
+        <div class="kv_box">
+          <h1 class="kv_title kv_title__about">Case</h1>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- case -->
+      <section class="top_case" id="case">
+        <div class="contents">
+          <h2 class="top_section_title has-bg-en" data-en="CASE">事例紹介</h2>
+
+          <div class="top_case_body">
+            <ul class="case_list">
+              <!-- item 1 -->
+              <li class="case_item">
+                <a href="case-detail.html" class="case_link">
+                  <div class="case_thumb is-e6e5ef">
+                    <img
+                      src="../img/dummy1.png"
+                      alt="クリニックのWebサイト制作実績サムネイル"
+                      decoding="async"
+                      loading="lazy"
+                      width="2800"
+                      height="6932"
+                    />
+                  </div>
+                  <div class="case_meta">
+                    <p class="case_name">クリニック</p>
+                    <p class="case_client">〇〇 〇〇様</p>
+                    <p class="case_text">
+                      患者さん向けに清潔感を重視したデザイン。
+                      <br />
+                      問い合わせ数が増加し、新患獲得につながりました。
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <!-- item 2 -->
+              <li class="case_item">
+                <a href="case-detail.html" class="case_link">
+                  <div class="case_thumb is-ced7dc">
+                    <img
+                      src="../img/dummy2.png"
+                      alt="整体院のWebサイト制作実績サムネイル"
+                      decoding="async"
+                      loading="lazy"
+                      width="2800"
+                      height="16384"
+                    />
+                  </div>
+                  <div class="case_meta">
+                    <p class="case_name">整体院</p>
+                    <p class="case_client">〇〇 〇〇様</p>
+                    <p class="case_text">
+                      活気と信頼感を表現したサイトを制作。
+                      <br />
+                      見学予約フォームの利用率が向上しました。
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <!-- item 3 -->
+              <li class="case_item">
+                <a href="case-detail.html" class="case_link">
+                  <div class="case_thumb is-e6e5ef">
+                    <img
+                      src="../img/dummy1.png"
+                      alt="幼稚園のWebサイト制作実績サムネイル"
+                      width="2800"
+                      height="6932"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="case_meta">
+                    <p class="case_name">幼稚園</p>
+                    <p class="case_client">〇〇 〇〇様</p>
+                    <p class="case_text">
+                      保護者が安心できる温かみあるデザインに。
+                      <br />
+                      入園説明会の参加申し込みが増えました。
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <!-- item 4 -->
+              <li class="case_item">
+                <a href="case-detail.html" class="case_link">
+                  <div class="case_thumb is-ced7dc">
+                    <img
+                      src="../img/dummy2.png"
+                      alt="介護コンサルのWebサイト制作実績サムネイル"
+                      width="2800"
+                      height="16384"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="case_meta">
+                    <p class="case_name">介護コンサル</p>
+                    <p class="case_client">〇〇 〇〇様</p>
+                    <p class="case_text">
+                      高齢者にも見やすいレイアウトを採用。
+                      <br />
+                      サービス相談の問い合わせ数が拡大しました。
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <!-- item 5 -->
+              <li class="case_item">
+                <a href="case-detail.html" class="case_link">
+                  <div class="case_thumb is-e6e5ef">
+                    <img
+                      src="../img/dummy1.png"
+                      alt="クリニックのWebサイト制作実績サムネイル"
+                      decoding="async"
+                      loading="lazy"
+                      width="2800"
+                      height="6932"
+                    />
+                  </div>
+                  <div class="case_meta">
+                    <p class="case_name">クリニック</p>
+                    <p class="case_client">〇〇 〇〇様</p>
+                    <p class="case_text">
+                      患者さん向けに清潔感を重視したデザイン。
+                      <br />
+                      問い合わせ数が増加し、新患獲得につながりました。
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <!-- item 6 -->
+              <li class="case_item">
+                <a href="case-detail.html" class="case_link">
+                  <div class="case_thumb is-ced7dc">
+                    <img
+                      src="../img/dummy2.png"
+                      alt="整体院のWebサイト制作実績サムネイル"
+                      decoding="async"
+                      loading="lazy"
+                      width="2800"
+                      height="16384"
+                    />
+                  </div>
+                  <div class="case_meta">
+                    <p class="case_name">整体院</p>
+                    <p class="case_client">〇〇 〇〇様</p>
+                    <p class="case_text">
+                      活気と信頼感を表現したサイトを制作。
+                      <br />
+                      見学予約フォームの利用率が向上しました。
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <!-- item 7 -->
+              <li class="case_item">
+                <a href="case-detail.html" class="case_link">
+                  <div class="case_thumb is-e6e5ef">
+                    <img
+                      src="../img/dummy1.png"
+                      alt="幼稚園のWebサイト制作実績サムネイル"
+                      width="2800"
+                      height="6932"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="case_meta">
+                    <p class="case_name">幼稚園</p>
+                    <p class="case_client">〇〇 〇〇様</p>
+                    <p class="case_text">
+                      保護者が安心できる温かみあるデザインに。
+                      <br />
+                      入園説明会の参加申し込みが増えました。
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <!-- item 8 -->
+              <li class="case_item">
+                <a href="case-detail.html" class="case_link">
+                  <div class="case_thumb is-ced7dc">
+                    <img
+                      src="../img/dummy2.png"
+                      alt="介護コンサルのWebサイト制作実績サムネイル"
+                      width="2800"
+                      height="16384"
+                      decoding="async"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="case_meta">
+                    <p class="case_name">介護コンサル</p>
+                    <p class="case_client">〇〇 〇〇様</p>
+                    <p class="case_text">
+                      高齢者にも見やすいレイアウトを採用。
+                      <br />
+                      サービス相談の問い合わせ数が拡大しました。
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+
+    <footer class="site_footer" id="footer">
+      <div class="footer_inner">
+        <div class="footer_brand">
+          <p class="footer_logo">Shimizu Web Studio</p>
+          <address class="footer_addr">
+            〒000-0000<br />
+            東京都豊島区南池袋１丁目
+          </address>
+          <ul class="footer_sns" aria-label="SNS">
+            <li>
+              <a href="#" aria-label="X(Twitter)"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="footer_nav" aria-label="フッターナビ">
+          <ul class="footer_navlist">
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="case.html">Case</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="footer_copy">© M.Shimizu</p>
+    </footer>
+  </body>
+</html>
