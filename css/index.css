@@ -132,7 +132,12 @@ video {
   letter-spacing: 0.06em;
   color: var(--base);
   font-size: clamp(20px, 5vw, 32px);
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  text-align: center;
 }
+
 .top_section_title span {
   color: var(--primary);
 }
@@ -360,7 +365,9 @@ video {
   justify-items: center;
 }
 
-.top_case .case_item { justify-self: center; }
+.top_case .case_item {
+  justify-self: center;
+}
 
 .top_case .case_link {
   display: block;
@@ -391,10 +398,12 @@ video {
   display: block;
   object-fit: cover;
   object-position: 50% 0%;
-  transition: transform .35s ease;
+  transition: transform 0.35s ease;
 }
 
-.top_case .case_link:hover .case_thumb img { transform: scale(1.02); }
+.top_case .case_link:hover .case_thumb img {
+  transform: scale(1.02);
+}
 
 .top_case .case_thumb::after {
   content: "";
@@ -405,9 +414,17 @@ video {
   background: transparent;
 }
 
-.top_case .case_thumb.is-e6e5ef::after { background-color: #E6E5EF; opacity: .6; }
-.top_case .case_thumb.is-ced7dc::after { background-color: #CED7DC; opacity: .6; }
-.top_case .case_link:hover .case_thumb::after { opacity: .35; }
+.top_case .case_thumb.is-e6e5ef::after {
+  background-color: #e6e5ef;
+  opacity: 0.6;
+}
+.top_case .case_thumb.is-ced7dc::after {
+  background-color: #ced7dc;
+  opacity: 0.6;
+}
+.top_case .case_link:hover .case_thumb::after {
+  opacity: 0.35;
+}
 
 .top_case .case_thumb::before {
   content: "これはダミー画像です";
@@ -464,11 +481,11 @@ video {
   }
 }
 
-@media (max-width: 767.98px){
-  .top_case{
+@media (max-width: 767.98px) {
+  .top_case {
     padding-inline: clamp(16px, 4vw, 24px);
   }
-  .top_case .case_list{
+  .top_case .case_list {
     grid-template-columns: minmax(0, 400px);
     justify-content: center;
     justify-items: center;
@@ -476,7 +493,7 @@ video {
     margin-inline: auto;
   }
   .top_case .case_link,
-  .top_case .case_thumb{
+  .top_case .case_thumb {
     width: min(100%, 400px);
   }
 }
