@@ -14,6 +14,9 @@
   --content-width-lg: 1000px;
 }
 
+.contents {
+  padding-block: clamp(100px, 12vw, 200px);
+}
 /*---------- kv ----------*/
 .kv {
   position: relative;
@@ -76,7 +79,7 @@
   }
 }
 
-/* about */
+/*----------- about ----------*/
 .top_section_title {
   margin: 0;
   text-align: center;
@@ -205,7 +208,7 @@
   );
 }
 
-/* profile */
+/*---------- profile ----------*/
 :root {
   --line-width: 4px;
   --line-height: 60px;
@@ -231,7 +234,6 @@
   }
 }
 
-/* ===== Layout ===== */
 .profile .container {
   width: clamp(327px, 100%, 1000px);
   margin: 0 auto;
@@ -256,7 +258,7 @@
   width: 100%;
 }
 
-/* ===== Table ===== */
+/*---------- Table ----------*/
 .profile_dl {
   display: grid;
   row-gap: clamp(18px, 3.5vw, 36px);
@@ -285,6 +287,7 @@
   position: relative;
   font-size: clamp(16px, 2.6vw, 20px);
   font-weight: 700;
+  text-align: left;
 }
 .profile_dl dd::before {
   content: "";
@@ -298,7 +301,7 @@
   border-radius: 2px;
 }
 
-/* ===== Map ===== */
+/*---------- Map ----------*/
 .profile_maps {
   display: block;
 }

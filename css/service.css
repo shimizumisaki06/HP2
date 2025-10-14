@@ -9,7 +9,8 @@
 }
 
 .contents {
-  padding: 120px 0;
+  padding-top: clamp(100px, 12vw, 200px);
+  padding-bottom: 0;
 }
 
 /*---------- kv ----------*/
@@ -71,7 +72,7 @@
   }
 }
 
-/* service */
+/*---------- service ----------*/
 .top_service .container {
   width: clamp(327px, 100%, 1000px);
   margin: 0 auto;
@@ -164,6 +165,7 @@
   width: clamp(340px, 100%, 1000px);
   margin-inline: auto;
   padding-inline: clamp(16px, 4vw, 24px);
+  padding-top: clamp(80px, 12vw, 200px);
   box-sizing: border-box;
 }
 
@@ -176,8 +178,8 @@
   width: 100%;
   margin: 16px 0;
   box-sizing: border-box;
-  --dur: 1.5s;
-  --fade: 1.5s;
+  --dur: 0.8s;
+  --fade: 0.8s;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid var(--accent);
   background: var(--white-color);
