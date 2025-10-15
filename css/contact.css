@@ -99,8 +99,8 @@
 .contact_form input[type="tel"],
 .contact_form textarea {
   width: 100%;
-  height: 44px;
-  padding: 8px 10px;
+    height: clamp(50px, 6vw, 70px);  
+    padding: clamp(8px, 1.2vw, 16px) 14px;
   border: 2px solid var(--accent);
   background: var(--white-color);
   border-radius: 4px;
@@ -112,8 +112,9 @@
 }
 .contact_form textarea {
   height: auto;
-  min-block-size: 160px;
+  min-block-size: clamp(200px, 24vw, 300px);
   resize: vertical;
+  
 }
 .contact_form input:focus-visible,
 .contact_form textarea:focus-visible {

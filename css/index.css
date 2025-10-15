@@ -32,6 +32,10 @@ video {
   height: auto;
 }
 
+.contents {
+  padding: clamp(80px, 12vw, 160px) 0;
+}
+
 /*----------- KV ----------*/
 .top_kv {
   position: relative;
@@ -156,6 +160,7 @@ video {
 
 /*---------- About ----------*/
 .top_about .container {
+  
   width: clamp(327px, 100%, 1000px);
   box-sizing: border-box;
   margin: 0 auto;
@@ -234,6 +239,7 @@ video {
 
 /*---------- Service ----------*/
 .top_service {
+  padding-top: clamp(80px, 12vw, 160px) 0;
   background: color-mix(in srgb, var(--main) 92%, #000 8%);
 }
 .top_service .container {
@@ -311,6 +317,9 @@ video {
   color: var(--base);
 }
 
+
+
+
 /* -------- Case -------- */
 :root {
   --case-min: 360px;
@@ -318,9 +327,7 @@ video {
   --case-gap: clamp(24px, 4vw, 56px);
 }
 
-.top_case {
-  padding-inline: clamp(16px, 4vw, 24px);
-}
+
 .top_section_title__case {
   text-align: center;
 }
