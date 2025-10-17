@@ -269,7 +269,6 @@ video {
 /*---------- Service ----------*/
 
 .top_service {
-  padding: clamp(80px, 12vw, 160px) 0 0;
   background: color-mix(in srgb, var(--main) 92%, #000 8%);
 }
 
