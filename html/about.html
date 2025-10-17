@@ -104,13 +104,12 @@
     </header>
 
     <!-- kv -->
-    <div class="kv">
-      <div class="container-lg">
-        <div class="kv_box">
-          <h1 class="kv_title kv_title__about">About us</h1>
-        </div>
-      </div>
-    </div>
+<div class="kv">
+  <img class="kv__bg" src="../img/about-kv.jpg" alt="" aria-hidden="true">
+  <div class="kv_box">
+    <h1 class="kv_title">About us</h1>
+  </div>
+</div>
 
     <main>
       <!-- about -->
@@ -156,63 +155,45 @@
       </section>
 
       <!-- profile -->
-      <section class="profile" id="profile">
-        <div class="container">
-          <h2 class="top_section_title has-bg-en" data-en="Profile">
-            会社概要
-          </h2>
+<section class="profile" id="profile">
+  <!-- タイトルは背景の外（通常の幅） -->
+  <div class="container">
+    <h2 class="top_section_title has-bg-en" data-en="Profile">会社概要</h2>
+  </div>
 
-          <div class="profile_panel">
-            <dl class="profile_dl">
-              <div class="row">
-                <dt>商号</dt>
-                <dd>Shimizu Web Studio</dd>
-              </div>
-              <div class="row">
-                <dt>従業員数</dt>
-                <dd>10名</dd>
-              </div>
-              <div class="row">
-                <dt>資本金</dt>
-                <dd>3,000,000円</dd>
-              </div>
-              <div class="row">
-                <dt>設立</dt>
-                <dd>2025年10月</dd>
-              </div>
-              <div class="row">
-                <dt>TEL</dt>
-                <dd>000-0000-0000</dd>
-              </div>
-              <div class="row">
-                <dt>E-mail</dt>
-                <dd>example.com</dd>
-              </div>
-              <div class="row">
-                <dt>所在地</dt>
-                <dd>
-                  〒000-0000<br />
-                  東京都豊島区南池袋１丁目
-                </dd>
-              </div>
-            </dl>
+  <!-- タイトルの下：背景ゾーン（画面端まで） -->
+  <div class="profile_bg">
+    <!-- 中身は container で中央寄せ -->
+    <div class="container">
+      <div class="profile_panel">
+        <dl class="profile_dl">
+          <div class="row"><dt>商号</dt><dd>Shimizu Web Studio</dd></div>
+          <div class="row"><dt>従業員数</dt><dd>10名</dd></div>
+          <div class="row"><dt>資本金</dt><dd>3,000,000円</dd></div>
+          <div class="row"><dt>設立</dt><dd>2025年10月</dd></div>
+          <div class="row"><dt>TEL</dt><dd>000-0000-0000</dd></div>
+          <div class="row"><dt>E-mail</dt><dd>example.com</dd></div>
+          <div class="row"><dt>所在地</dt>
+            <dd>〒000-0000<br>東京都豊島区南池袋１丁目</dd>
+          </div>
+        </dl>
 
-            <!-- Map -->
-            <div class="profile_maps">
-              <div class="map-wrap">
-                <iframe
-                  class="map"
-                  src="https://www.google.com/maps?q=%E6%B1%A0%E8%A2%8B&z=16&output=embed"
-                  title="Google map（池袋周辺）"
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
+        <!-- Map -->
+        <div class="profile_maps">
+          <div class="map-wrap">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps?q=%E6%B1%A0%E8%A2%8B&z=16&output=embed"
+              title="Google map（池袋周辺）"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
 
     <!-- footer -->

@@ -9,58 +9,86 @@
 }
 
 /* ---------- kv ---------- */
+html,
+body {
+  overflow-x: hidden;
+}
+
 .kv {
   position: relative;
-  height: 400px;
-  color: var(--white-color, #fff);
-  overflow: hidden;
   isolation: isolate;
+  inline-size: 100dvw;
+  margin-inline: calc(50% - 50dvw);
+  block-size: clamp(260px, 48vw, 520px);
+  color: var(--white-color);
+  overflow: hidden;
+
   --kv-x: 22%;
   --kv-y: 82%;
-  --kv-bleed-x: clamp(48px, 14vw, 160px);
-  --kv-bleed-y: clamp(64px, 20vw, 180px);
+  height: 400px;
 }
-.kv::before {
+
+.kv__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: var(--kv-x) var(--kv-y);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.kv::after {
   content: "";
   position: absolute;
-  top: calc(-1 * var(--kv-bleed-y));
-  right: calc(-1 * var(--kv-bleed-x));
-  bottom: calc(-1 * var(--kv-bleed-y));
-  left: calc(-1 * var(--kv-bleed-x));
-  z-index: -1;
-  background: linear-gradient(rgba(62, 62, 62, 0.46), rgba(62, 62, 62, 0.46)),
-    url("../img/contact-img.jpg") var(--kv-x) var(--kv-y) / cover no-repeat;
+  inset: 0;
+  background: linear-gradient(rgba(62, 62, 62, 0.46), rgba(62, 62, 62, 0.46));
+  pointer-events: none;
+  z-index: 0;
 }
+
 .kv_box {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 60px;
-  bottom: 0;
+  inset: 60px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 0 clamp(16px, 4vw, 24px);
+ 
+  width: min(100%, 1000px);
   margin-inline: auto;
-  max-width: 1000px;
+  z-index: 1;
 }
+
 .kv_title {
   margin: 0;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.04em;
   font-size: clamp(20px, 5vw, 32px);
+  color: var(--white-color);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  z-index: 100;
+}
+
+@media (max-width: 560px) {
+  .kv {
+    --kv-x: 50%;
+    --kv-y: 40%;
+  }
 }
 
 /* ---------- contact ---------- */
 .contact-container {
-  width: clamp(340px, 100%, 1000px);
+  width: 100%;
+  max-width: 1000px;      
   margin-inline: auto;
   padding-inline: clamp(16px, 4vw, 24px);
   padding-top: clamp(100px, 12vw, 200px);
   box-sizing: border-box;
 }
+
 .contact_lead {
   margin: 0.6em auto 1.2em;
   text-align: center;
@@ -218,7 +246,7 @@
   align-items: center;
   justify-content: center;
   width: clamp(200px, 50vw, 280px);
-  padding: 15px 0;
+  padding-block: clamp(10px, 2.8vw, 15px);
   border-radius: 999px;
   background: var(--accent);
   color: var(--white-color);
