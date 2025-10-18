@@ -232,7 +232,6 @@ body {
 
 .profile_bg {
   position: relative;
-  padding-block: clamp(40px, 6vw, 72px);
 }
 
 .profile_bg::before {
@@ -270,7 +269,7 @@ body {
 .profile_dl .row {
   display: grid;
 
-  grid-template-columns: clamp(5.2em, 22vw, 9.5em) minmax(0, 1fr);
+  grid-template-columns: clamp(4em, 15vw, 4.5em) minmax(0, 1fr);
   column-gap: clamp(8px, 2.2vw, 16px);
   align-items: center;
   min-width: 0;
@@ -279,26 +278,26 @@ body {
 .profile_dl dt {
   margin: 0;
   text-align: right;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--base) 85%, #000 15%);
-  padding-right: clamp(4px, 1.2vw, 10px);
+
   white-space: nowrap;
-  font-size: clamp(12px, 3vw, 32px);
+  font-size: clamp(14px, 3vw, 16px);
 }
 
 .profile_dl dd {
   margin: 0;
   text-align: left;
-  font-weight: 700;
+
   color: var(--base);
   min-width: 0;
   padding-left: clamp(8px, 1.6vw, 24px);
-  border-left: var(--line-width, 4px) solid var(--accent);
+  border-left: var(--line-width, 2px) solid var(--accent);
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: normal;
   hyphens: auto;
-  font-size: clamp(12px, 3vw, 32px);
+  font-size: clamp(14px, 3vw, 16px);
+  max-width: min(70vw, 58ch);
+  white-space: normal;
 }
 
 .profile_dl {
@@ -310,27 +309,18 @@ body {
 .profile_dl .row {
   display: grid;
 
-  grid-template-columns: max-content minmax(16ch, fit-content(min(70vw, 58ch)));
-  justify-content: center;
-  column-gap: clamp(12px, 3vw, 20px);
+  grid-template-columns: max-content minmax(16ch, fit-content(min(7vw, 10ch)));
+
   align-items: center;
+  justify-content: start;
+
+  column-gap: clamp(12px, 3vw, 20px);
   min-width: 0;
 }
 
-.profile_dl dd {
-  border-left: var(--line-width, 4px) solid var(--accent);
-  padding-left: clamp(8px, 1.6vw, 24px);
-  max-width: min(70vw, 58ch);
-  white-space: normal;
-  overflow-wrap: anywhere;
-  word-break: normal;
-  hyphens: auto;
-}
-
 .profile_dl dt {
-  text-align: right;
+  text-align: start;
   white-space: nowrap;
-  padding-right: clamp(4px, 1.2vw, 10px);
 }
 
 .profile_bg > .container {
@@ -342,17 +332,11 @@ body {
   .profile_panel {
     padding-inline: clamp(12px, 4vw, 16px);
   }
-  .profile_dl,
-  .profile_maps .map-wrap {
-    max-width: none;
-    width: 100%;
-  }
+
   .profile_dl .row {
     column-gap: clamp(6px, 2.2vw, 12px);
   }
-  .profile_dl dt {
-    padding-right: clamp(4px, 1.6vw, 8px);
-  }
+
   .profile_dl dd {
     padding-left: clamp(6px, 1.6vw, 10px);
   }
@@ -361,7 +345,7 @@ body {
 /*---------- Map ----------*/
 .profile_maps .map-wrap {
   box-sizing: border-box;
-  width: 100%;
+  width: 75%;
   max-width: 840px;
   margin-inline: auto;
 }
